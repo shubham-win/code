@@ -49,7 +49,7 @@ background: linear-gradient(27deg, rgb(48, 52, 90) 26%, rgb(6, 152, 120) 56%, rg
         }
 
         input:hover{
-            transition: border-color 0.2s ease-in-out;
+            transition: border-image 0.2s ease-in-out;
             border-image: linear-gradient(to right, #664312, #661b1f);
             border-image-slice: 1;
         }
@@ -61,7 +61,7 @@ background: linear-gradient(27deg, rgb(48, 52, 90) 26%, rgb(6, 152, 120) 56%, rg
         input:focus{ 
             font-weight: 700;
             border-width: 3px;
-            transition: border-color 0.2s ease-in-out;
+            transition: border-image 0.2s ease-in-out;
             border-image: linear-gradient(to right, #e99a2a, #ff454e);
             border-image-slice: 1;
         }
@@ -90,7 +90,6 @@ background: linear-gradient(27deg, rgb(48, 52, 90) 26%, rgb(6, 152, 120) 56%, rg
             width: 100px;
             height: 30px;
             font-size: 16px;
-            background: transparent;
             border: none;
             position: relative;
             color: #f0f0f0;
@@ -172,8 +171,6 @@ background: linear-gradient(27deg, rgb(48, 52, 90) 26%, rgb(6, 152, 120) 56%, rg
             }
 
             ReactDOM.render(React.createElement(Login), document.getElementById('root'));
-            
-            
             document.querySelector('form').onsubmit = () => {
                 if(document.querySelector('input[type="text"]').value === '' || document.querySelector('input[type="password"]').value === '') {
                     alert('Please fill all the fields');
@@ -181,6 +178,7 @@ background: linear-gradient(27deg, rgb(48, 52, 90) 26%, rgb(6, 152, 120) 56%, rg
                 } else {
                 alert('Username:-'+' '+document.querySelector('input[type="text"]').value + ' ' + 'Password:-' +' '+ document.querySelector('input[type="password"]').value);
             }
+                return false;
         }
             
     </script>
